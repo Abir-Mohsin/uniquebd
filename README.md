@@ -136,7 +136,7 @@
     </div>
 
     <div class="card">
-      <img src="fan.jpg" alt="fan">
+      <img src="fan.png" alt="fan">
       <h3>Rechargeable Fan</h3>
       <p class="price">৳ 1500</p>
       <p>লোডশেডিংয়ে সেরা সমাধান</p>
