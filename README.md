@@ -176,7 +176,7 @@
     <button type="button" onclick="sendWhatsApp()">WhatsApp এ অর্ডার পাঠান</button>
   </form>
 
-  <a class="wa-btn" href="https://wa.me/8801788876206" target="_blank">Direct WhatsApp</a>
+  <a class="wa-btn" href="https://wa.me/+8801788876206" target="_blank">Direct WhatsApp</a>
 
   <div class="payment">
     <p><strong>Google Form (Backup Order System):</strong></p>
@@ -189,7 +189,7 @@
 
 <section id="contact" class="section">
   <h2>যোগাযোগ</h2>
-  <p>📞 8801788876206</p>
+  <p>📞 +8801788876206</p>
   <p>📧 abirmohsin02@gmail.com</p>
 </section>
 
@@ -205,7 +205,7 @@ function sendWhatsApp() {
 
   let message = `নতুন অর্ডার:%0Aনাম: ${name}%0Aমোবাইল: ${phone}%0Aঠিকানা: ${address}`;
 
-  let url = `https://wa.me/8801788876206?text=${message}`;
+  let url = `https://wa.me/+8801788876206?text=${message}`;
   window.open(url, '_blank');
 }
 </script>
