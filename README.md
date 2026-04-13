@@ -130,7 +130,7 @@
 
     <div class="card">
       <img src="umbrella.jpg" width="300">
-      " alt="Umbrella">
+      " alt="umbrella">
       <h3>ফাইবার ছাতা</h3>
       <p class="price">৳ 850</p>
       <p>মজবুত ও স্টাইলিশ</p>
