@@ -54,11 +54,6 @@
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 260px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
     }
 
     .card img {
@@ -73,9 +68,12 @@
     }
 
     form {
-      max-width: 400px;
+      max-width: 420px;
       margin: auto;
       text-align: left;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     input, textarea {
@@ -94,6 +92,7 @@
       border: none;
       border-radius: 8px;
       font-size: 16px;
+      cursor: pointer;
     }
 
     .payment {
@@ -101,6 +100,24 @@
       background: #fff3cd;
       padding: 10px;
       border-radius: 8px;
+    }
+
+    .wa-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 10px;
     }
 
     footer {
@@ -129,56 +146,69 @@
   <div class="products">
 
     <div class="card">
-      <img src="umbrella.jpg" alt="umbrella">
+      <img src="umbrella.jpg" alt="Umbrella">
       <h3>ফাইবার ছাতা</h3>
       <p class="price">৳ 850</p>
-      <p>মজবুত ও স্টাইলিশ</p>
     </div>
 
     <div class="card">
-      <img src="fan.jpg" alt="fan">
+      <img src="fan.jpg" alt="Fan">
       <h3>Rechargeable Fan</h3>
       <p class="price">৳ 1500</p>
-      <p>লোডশেডিংয়ে সেরা সমাধান</p>
     </div>
 
   </div>
 </section>
 
 <section id="order" class="section">
-  <h2>অর্ডার ফর্ম</h2>
+  <h2>অর্ডার করুন</h2>
 
   <form>
     <label>আপনার নাম</label>
-    <input type="text" placeholder="নাম লিখুন" required>
+    <input type="text" id="name" placeholder="নাম লিখুন">
 
     <label>মোবাইল নাম্বার</label>
-    <input type="tel" placeholder="01XXXXXXXXX" required>
+    <input type="tel" id="phone" placeholder="01788876206">
 
     <label>ঠিকানা</label>
-    <textarea placeholder="আপনার ঠিকানা লিখুন" required></textarea>
+    <textarea id="address" placeholder="আপনার ঠিকানা"></textarea>
 
-    <button type="submit">অর্ডার সাবমিট</button>
+    <button type="button" onclick="sendWhatsApp()">WhatsApp এ অর্ডার পাঠান</button>
   </form>
 
-  <div class="payment">
-    <p><strong>Payment Method:</strong></p>
-    <p>📱 বিকাশ / নগদ: 0567828001</p>
-  </div>
+  <a class="wa-btn" href="https://wa.me/01788876206" target="_blank">Direct WhatsApp</a>
 
-  <br>
-  <a href="https://wa.me/880567828001" style="background:#25D366; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">WhatsApp Order</a>
+  <div class="payment">
+    <p><strong>Google Form (Backup Order System):</strong></p>
+    <p>নিচের ফর্মে অর্ডার দিন 👇</p>
+
+    <!-- এখানে তোমার Google Form link বসাবে -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE7z37kBYqvSbVbDDu420uZPFA-tu4r3iqmSeTiuepZJUUfA/viewform?embedded=true" width="640" height="724" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
 </section>
 
 <section id="contact" class="section">
   <h2>যোগাযোগ</h2>
   <p>📞 0567828001</p>
-  <p>📧 jahidulislam202530@gmail.com</p>
+  <p>📧 abirmohsin02@gmail.com</p>
 </section>
 
 <footer>
-  © 2026 UniqueBD | Developed by You 🚀
+  © 2026 UniqueBD | All rights reserved
 </footer>
+
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let address = document.getElementById('address').value;
+
+  let message = `নতুন অর্ডার:%0Aনাম: ${name}%0Aমোবাইল: ${phone}%0Aঠিকানা: ${address}`;
+
+  let url = `https://wa.me/01788876206?text=${message}`;
+  window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
